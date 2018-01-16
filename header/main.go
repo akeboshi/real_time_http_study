@@ -11,7 +11,7 @@ func main() {
 	request, err := http.NewRequest("GET", "http://localhost:18888", nil)
 	request.Header.Add("Content-Type", "image/jpeg")
 	// BASIC認証
-	request.SetBasicAuth(" ユーザ名 ", " パスワード ")
+	request.SetBasicAuth("ユーザ", "パスワード")
 	// クッキー
 	request.AddCookie(&http.Cookie{Name: "test", Value: "value"})
 	if err != nil {
